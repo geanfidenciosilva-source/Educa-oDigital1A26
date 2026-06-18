@@ -25,14 +25,49 @@
 <button>🦖<span></span></button>
 <button>🐣<span></span></button>
 </div>
+
+<article>
+
+<article>
+    div>
+<h2>Meu segundo post</h2>
+
+<p class="artigo-autor">
+Por: Gean fidencio da silva
+</p>
+
+<p>
+Neste post vou compartilhar mais conteúdos sobre HTML, CSS
+e JavaScript para quem está começando na programação.
+</p>
+
+<button>🦖 <span>0</span></button>
+<button>🐣<span>0</span></button>
+</div>
+</article>
+
 </main>
-</body>
+
 <script>
-const botao = document.querySelector("button");
+const botoes = document.querySelectorAll("button");
+
+botoes.forEach(function (botao) {
+let curtiu = false;
+
 botao.addEventListener("click", botaoClicado);
+
 function botaoClicado() {
 let texto = botao.querySelector("span");
+
+if (curtiu === false) {
 texto.textContent++;
+curtiu = true;
+} else {
+texto.textContent--;
+curtiu = false;
 }
+}
+});
 </script>
+</body>
 </html>
