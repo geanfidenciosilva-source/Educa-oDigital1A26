@@ -198,6 +198,25 @@
         <a href="https://cloud.google.com/learn/what-is-artificial-intelligence?hl=pt-br" target="_blank">
             Google Cloud - Inteligência Artificial
         </a>
+   
+   
+   
+   <script>
+const botoes = document.querySelectorAll("button");
+
+botoes.forEach(function(botao) {
+    botao.addEventListener("click", function() {
+        let span = botao.querySelector("span");
+
+        if (span.textContent == "0") {
+            span.textContent = "1";
+        } else {
+            span.textContent = "0";
+        }
+    });
+});
+</script>
+
     </p>
 </section>
 
